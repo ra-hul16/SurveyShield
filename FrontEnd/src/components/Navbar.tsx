@@ -244,6 +244,94 @@
 //   );
 // };
 
+//-----------------------------
+
+// import React, { useState } from 'react';
+// import './Navbar.css';
+// import { useNavigate } from 'react-router-dom';
+// import profileImg from './profile.jpg';
+
+// export const Navbar: React.FC = () => {
+//   const [showProfileMenu, setShowProfileMenu] = useState(false);
+//   const navigate = useNavigate();
+
+//   const handleButtonClick = (url: string) => {
+//     if (url === "logout") {
+//       localStorage.removeItem('isAuthenticated');
+//       navigate('/');
+//     } else {
+//       navigate(url);
+//     }
+//   };
+
+//   return (
+//     <nav className="navbar">
+//       <div className="navbar-center">
+//         <span className="navbar-link" onClick={() => handleButtonClick("")}>Home</span>
+//         <span className="navbar-link" onClick={() => handleButtonClick("/about")}>About</span>
+//         <span className="navbar-link" onClick={() => handleButtonClick("/contact")}>Contact</span>
+//       </div>
+//       <div className="profile-container">
+//         <img
+//           src={profileImg}
+//           alt="Profile"
+//           className="profile-icon"
+//           onClick={() => setShowProfileMenu(!showProfileMenu)}
+//         />
+//         <div className={`profile-menu ${showProfileMenu ? 'visible' : ''}`}>
+//           <a href="/profile" onClick={() => setShowProfileMenu(false)}>My Profile</a>
+//           <a href="/" onClick={() => handleButtonClick("logout")}>Logout</a>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+//org -------------------
+
+// import React, { useState } from 'react';
+// import './Navbar.css';
+// import { useNavigate } from 'react-router-dom';
+// import profileImg from './profile.jpg';
+
+// export const Navbar: React.FC = () => {
+//   const [showProfileMenu, setShowProfileMenu] = useState(false);
+//   const navigate = useNavigate();
+
+//   const handleButtonClick = (url: string) => {
+//     if (url === "logout") {
+//       localStorage.removeItem('isAuthenticated');
+//       navigate('/');
+//     } else {
+//       navigate(url);
+//     }
+//   };
+
+//   return (
+//     <nav className="navbar">
+//       <div className="navbar-center">
+//         <span className="navbar-link" onClick={() => handleButtonClick("")}>Home</span>
+//         <span className="navbar-link" onClick={() => handleButtonClick("/about")}>About</span>
+//         <span className="navbar-link" onClick={() => handleButtonClick("/contact")}>Contact</span>
+//       </div>
+//       <div className="profile-container">
+//         <img
+//           src={profileImg}
+//           alt="Profile"
+//           className="profile-icon"
+//           onClick={() => setShowProfileMenu(!showProfileMenu)}
+//         />
+//         <div className={`profile-menu ${showProfileMenu ? 'visible' : ''}`}>
+//           <a href="/profile" onClick={() => setShowProfileMenu(false)}>My Profile</a> {/* Updated to navigate to the profile */}
+//           <a href="/" onClick={() => handleButtonClick("logout")}>Logout</a>
+//         </div>
+//       </div>
+//     </nav>
+//   );
+// };
+
+//------------------------
+
 import React, { useState } from 'react';
 import './Navbar.css';
 import { useNavigate } from 'react-router-dom';
@@ -284,6 +372,7 @@ export const Navbar: React.FC = () => {
     </nav>
   );
 };
+
 
 
 
